@@ -1,0 +1,122 @@
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+#calendar {
+    max-width: 900px;
+}
+
+/* Month header */
+.month {
+    padding: 40px 25px;
+    background: #7c00ff;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+    padding-top: 0;
+    cursor: pointer;
+}
+
+/* Next button */
+.month .next {
+    float: right;
+    padding-top: 0;
+    cursor: pointer;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#7c00ff;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: white;
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+    font-weight: bold;
+    border-radius: 0 0 5px 5px;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:14px;
+    color: #474747;
+    line-height: 50px;
+    height: 60px;
+    padding: 5px 2.5px;
+}
+
+.days li div{
+    text-align: center;
+    vertical-align: center;
+    height: 80%;
+    padding: 5px;
+    border: 1.5px solid #7c00ff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+
+.days li span{
+    display: block;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+    background: #7c00ff;
+    color: white !important
+}
+
+.day-outline{
+    cursor: pointer;
+}
+
+.event::after{
+    content: "•";
+    display: block;
+    position: relative;
+    white-space: pre;
+    line-height: 0;
+    top: -8px;
+    color: #7c00ff;
+}
+
+.no-event::after{
+    content: " ";
+    display: block;
+    position: relative;
+    white-space: pre;
+    line-height: 0;
+    top: -8px;
+}
